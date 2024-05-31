@@ -14,7 +14,7 @@ namespace Invoices.Service.DependencyInjection
            
             services.AddMassTransit(x =>
             {
-                x.AddConsumer<OrderInvoicesConsumer>(); // Tüketiciyi ekliyoruz
+                x.AddConsumer<OrderInvoicesConsumer>(); 
 
                 x.UsingRabbitMq((context, cfg) =>
                 {
@@ -26,7 +26,7 @@ namespace Invoices.Service.DependencyInjection
 
                     cfg.ReceiveEndpoint("InvoiceQueue", ep =>
                     {
-                        ep.Bind<OrderInvoiceDto>(); // Gelen mesaj tipini belirtiyoruz
+                        ep.Bind<OrderInvoiceDto>(); 
                         ep.ConfigureConsumer<OrderInvoicesConsumer>(context);
                     });
                 });
