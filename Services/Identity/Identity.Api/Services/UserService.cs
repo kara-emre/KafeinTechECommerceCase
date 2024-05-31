@@ -11,7 +11,7 @@ namespace Identity.Api.Services
             {
                 Id = 5005,
                 Address = "İstanbul / Turkey",
-                Mail = "sa",
+                Mail = "mr.emrekara@outlook.com",
                 Name = "Emre",
                 Password = "123"
             },

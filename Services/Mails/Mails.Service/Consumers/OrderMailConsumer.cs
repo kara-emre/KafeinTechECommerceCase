@@ -17,9 +17,9 @@ namespace Invoices.Service.Consumers
             if (mailDetail != null)
             {
                 //Mail gönderme işlemleri buradan sonra yapılabilir 
-                Console.Out.WriteLineAsync($"Mail Subject {mailDetail.Subject}");
-                Console.Out.WriteLineAsync($"Mail EMail {mailDetail.Email}");
-                Console.Out.WriteLineAsync($"Mail Body {mailDetail.Body}"); 
+                Console.Out.WriteLineAsync($"Subject : {mailDetail.Subject}");
+                Console.Out.WriteLineAsync($"E-Mail : {mailDetail.Email}");
+                Console.Out.WriteLineAsync($"Body : {mailDetail.Body}"); 
             }
             return Task.CompletedTask;
         }
