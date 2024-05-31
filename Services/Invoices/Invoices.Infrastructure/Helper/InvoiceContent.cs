@@ -8,8 +8,10 @@ namespace Invoices.Infrastructure.Helper
         public static string Builder(OrderInvoiceDto orderInvoiceDto)
         {
             StringBuilder MailOrderContent = new();
-            
-            MailOrderContent.AppendLine($"Kafeint Tech Invoice");
+
+            MailOrderContent.AppendLine($"------------------------------------------------------------------------------------");
+
+            MailOrderContent.AppendLine($"KafeinTech Invoice");
 
             MailOrderContent.AppendLine($"Dear : {orderInvoiceDto.Name} Invoice Detail");
 
@@ -23,6 +25,8 @@ namespace Invoices.Infrastructure.Helper
             }
 
             MailOrderContent.AppendLine($"Total : {orderInvoiceDto.Products.Sum(x => x.Price * x.Quantity)} TRY");
+           
+            MailOrderContent.AppendLine($"------------------------------------------------------------------------------------");
 
             return MailOrderContent.ToString();
         }

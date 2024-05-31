@@ -13,7 +13,11 @@ namespace Orders.Infrastructure.Helper
         {
             StringBuilder MailOrderContent = new StringBuilder();
 
-            MailOrderContent.AppendLine($"Dear : {dto.Name} Order Detail");
+            MailOrderContent.AppendLine($"------------------------------------------------------------------------------------");
+
+            MailOrderContent.AppendLine($"KafeinTech Order Detail");
+
+            MailOrderContent.AppendLine($"Dear, {dto.Name} Order Detail");
 
             MailOrderContent.AppendLine($"Order Number : {dto.OrderId}");
 
@@ -25,6 +29,8 @@ namespace Orders.Infrastructure.Helper
             }
 
             MailOrderContent.AppendLine($"Total : {dto.Products.Sum(x => x.Price * x.Quantity)} TRY");
+            
+            MailOrderContent.AppendLine($"------------------------------------------------------------------------------------");
 
             return MailOrderContent.ToString();
         }
