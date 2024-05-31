@@ -12,7 +12,7 @@ namespace Identity.Api.Controllers
         [HttpPost]
         [Route("Login")]
         [ProducesResponseType(typeof(UserLoginResponse), (int)HttpStatusCode.OK)]
-        public ActionResult<UserLoginResponse> CreateProduct([FromBody] UserLoginRequest userLoginRequest)
+        public ActionResult<UserLoginResponse> Login([FromBody] UserLoginRequest userLoginRequest)
         {
             try
             {
