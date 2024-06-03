@@ -1,5 +1,4 @@
-﻿using Invoices.Application.Interfaces;
-using Mails.Application.Dtos;
+﻿using Mails.Application.Dtos;
 using MassTransit;
 using Orders.Application.Dtos;
 using Orders.Application.Interfaces;

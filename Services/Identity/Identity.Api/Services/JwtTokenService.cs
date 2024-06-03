@@ -22,7 +22,7 @@ namespace Identity.Api.Services
 
         public string GenerateToken(UserEntity user)
         {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("E9sSHvBNzDP9ZVZGpAE9sSHvBNzDP9ZVZGpA"));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]

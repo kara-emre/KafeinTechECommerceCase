@@ -54,7 +54,7 @@ namespace Identity.Api.Services
             var user = DummyUserList.Where(x => x.Password == request.Password && x.Mail == request.Email).FirstOrDefault();
             if (user is not null)
             {
-                var tokenService = new JwtTokenService("Kooe5Af_XdijLR7dYqAaQzPl-E9sSHvBNzDP9ZVZGpA", "KafeinTech", "KafeinTechUser");
+                var tokenService = new JwtTokenService("E9sSHvBNzDP9ZVZGpAE9sSHvBNzDP9ZVZGpA", "KafeinTech", "KafeinTechUser");
                 var token = tokenService.GenerateToken(user);
 
                 return new()
