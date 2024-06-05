@@ -42,6 +42,6 @@ Her mikroservisin dizinine gidin ve dotnet run komutunu kullanarak mikroservisi 
 
 Token almak için Identity Microservice'in Login endpoint'ine dummy kullanıcı bilgileri gönderin.
 
-Order Microservice'in CreateProduct endpoint'ine token ile birlikte productId ve quantity bilgilerini gönderin.
+Order Microservice'in CreateOrder endpoint'ine token ile birlikte productId ve quantity bilgilerini gönderin.
 
 Mikroservisler arasındaki iletişim MassTransit ile sağlanacaktır ve ilgili işlemler otomatik olarak gerçekleştirilecektir.
