@@ -1,47 +1,44 @@
-KafeinTech E-Commerce Case
 
-Bu proje, .NET 8 kullanılarak oluşturulmuş bir mikroservis tabanlı e-ticaret uygulamasıdır.
+# KafeinTech E-Commerce Case
 
-Proje dört ana mikroservisten oluşmaktadır: Order, Identity, Invoices ve Mails. 
+This project is a microservice-based e-commerce application built using .NET 8.
 
-Her mikroservis bağımsız olarak çalışır ve MassTransit ile birbirleriyle haberleşir.
+The project consists of four main microservices: Order, Identity, Invoices, and Mails.
 
-Mikroservisler
+Each microservice operates independently and communicates via MassTransit.
 
-1. Order Microservice
-   
-Tablolar: Product, Order, OrderItem
+## Microservices
 
-Başlangıç Verileri: Beş örnek ürün
+### Order Microservice
+- **Tables:** Product, Order, OrderItem
+- **Initial Data:** Five sample products
+- **Functions:** Creating products and handling orders
+- **Communication:** Order info and invoice info queues
 
-Fonksiyonlar: Ürün oluşturma ve sipariş işlemleri
+### Identity Microservice
+- **Functions:** Generating JWT tokens
+- **Endpoint:** Login
 
-Haberleşme: Sipariş bilgisi ve fatura bilgisi kuyrukları
+### Invoices Microservice
+- **Functions:** Creating invoices and sending emails
+- **Communication:** Invoice info queues
 
-2. Identity Microservice
-   
-Fonksiyonlar: JWT token oluşturma
+### Mails Microservice
+- **Functions:** Sending emails
+- **Communication:** Email info queues
 
-Endpoint: Login
+## Setup and Execution
 
-3. Invoices Microservice
-   
-Fonksiyonlar: Fatura oluşturma ve e-posta gönderme
+1. Navigate to each microservice directory and start it using `dotnet run`.
+2. Send dummy user credentials to the Identity Microservice's Login endpoint to get a token.
+3. Use the token to send `productId` and `quantity` to the Order Microservice's CreateOrder endpoint.
+4. Communication between microservices will be handled by MassTransit, and relevant processes will be executed automatically.
 
-Haberleşme: Fatura bilgisi kuyrukları
+## Technologies Used
 
-4. Mails Microservice
-   
-Fonksiyonlar: E-posta gönderme
+- **.NET 8**
+- **MassTransit** for inter-service communication
+- **JWT** for authentication
+- **Docker** for containerization (if applicable)
 
-Haberleşme: E-posta bilgisi kuyrukları
-
-Kurulum ve Çalıştırma
-
-Her mikroservisin dizinine gidin ve dotnet run komutunu kullanarak mikroservisi başlatın.
-
-Token almak için Identity Microservice'in Login endpoint'ine dummy kullanıcı bilgileri gönderin.
-
-Order Microservice'in CreateOrder endpoint'ine token ile birlikte productId ve quantity bilgilerini gönderin.
-
-Mikroservisler arasındaki iletişim MassTransit ile sağlanacaktır ve ilgili işlemler otomatik olarak gerçekleştirilecektir.
+For more details, visit the [GitHub repository](https://github.com/kara-emre/KafeinTechECommerceCase).
