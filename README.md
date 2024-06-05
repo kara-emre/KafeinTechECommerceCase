@@ -18,19 +18,19 @@ Fonksiyonlar: Ürün oluşturma ve sipariş işlemleri
 
 Haberleşme: Sipariş bilgisi ve fatura bilgisi kuyrukları
 
-3. Identity Microservice
+2. Identity Microservice
    
 Fonksiyonlar: JWT token oluşturma
 
 Endpoint: Login
 
-5. Invoices Microservice
+3. Invoices Microservice
    
 Fonksiyonlar: Fatura oluşturma ve e-posta gönderme
 
 Haberleşme: Fatura bilgisi kuyrukları
 
-7. Mails Microservice
+4. Mails Microservice
    
 Fonksiyonlar: E-posta gönderme
 
