@@ -15,7 +15,7 @@ namespace Invoices.Infrastructure.Helper
 
             MailOrderContent.AppendLine($"Dear : {orderInvoiceDto.Name} Invoice Detail");
 
-            MailOrderContent.AppendLine($"Order Id : {orderInvoiceDto.OrderId}");
+            MailOrderContent.AppendLine($"Order Number : {orderInvoiceDto.OrderId}");
 
             MailOrderContent.AppendLine($"Address : {orderInvoiceDto.Address}");
 
