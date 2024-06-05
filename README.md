@@ -38,10 +38,7 @@ Each microservice operates independently and communicates via MassTransit.
 
 - **.NET 8**
 - **MassTransit** for inter-service communication
-- **JWT** for authentication
-- **Docker** for containerization (if applicable)
-- **C#** - Primary programming language used for development
-- **ASP.NET Core** - Framework for building web applications and services
+- **JWT** for authentication 
 - **Entity Framework Core** - ORM for database management
 - **MediatR** - Library for implementing CQRS (Command Query Responsibility Segregation) pattern
 - **AutoMapper** - Object-object mapping tool
