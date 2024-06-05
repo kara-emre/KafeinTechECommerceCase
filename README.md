@@ -1,4 +1,6 @@
+# Adding the specified technologies to the README.md content
 
+readme_content = """
 # KafeinTech E-Commerce Case
 
 This project is a microservice-based e-commerce application built using .NET 8.
@@ -40,5 +42,11 @@ Each microservice operates independently and communicates via MassTransit.
 - **MassTransit** for inter-service communication
 - **JWT** for authentication
 - **Docker** for containerization (if applicable)
+- **C#** - Primary programming language used for development
+- **ASP.NET Core** - Framework for building web applications and services
+- **Entity Framework Core** - ORM for database management
+- **MediatR** - Library for implementing CQRS (Command Query Responsibility Segregation) pattern
+- **AutoMapper** - Object-object mapping tool
+- **FluentValidation** - Library for building strongly-typed validation rules
 
-For more details, visit the [GitHub repository](https://github.com/kara-emre/KafeinTechECommerceCase).
+ 
