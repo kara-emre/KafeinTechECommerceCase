@@ -1,2 +1,47 @@
-5 Adet Dummy Product ve 5 Adet Dummy User proje içersine eklendi.
-![image](https://github.com/kara-emre/KafeinTechECommerceCase/assets/18901352/88f46406-0bb2-4182-9ef9-4fd46af65791)
+KafeinTech E-Commerce Case
+
+Bu proje, .NET 8 kullanılarak oluşturulmuş bir mikroservis tabanlı e-ticaret uygulamasıdır.
+
+Proje dört ana mikroservisten oluşmaktadır: Order, Identity, Invoices ve Mails. 
+
+Her mikroservis bağımsız olarak çalışır ve MassTransit ile birbirleriyle haberleşir.
+
+Mikroservisler
+
+1. Order Microservice
+   
+Tablolar: Product, Order, OrderItem
+
+Başlangıç Verileri: Beş örnek ürün
+
+Fonksiyonlar: Ürün oluşturma ve sipariş işlemleri
+
+Haberleşme: Sipariş bilgisi ve fatura bilgisi kuyrukları
+
+2. Identity Microservice
+   
+Fonksiyonlar: JWT token oluşturma
+
+Endpoint: Login
+
+3. Invoices Microservice
+   
+Fonksiyonlar: Fatura oluşturma ve e-posta gönderme
+
+Haberleşme: Fatura bilgisi kuyrukları
+
+4. Mails Microservice
+   
+Fonksiyonlar: E-posta gönderme
+
+Haberleşme: E-posta bilgisi kuyrukları
+
+Kurulum ve Çalıştırma
+
+Her mikroservisin dizinine gidin ve dotnet run komutunu kullanarak mikroservisi başlatın.
+
+Token almak için Identity Microservice'in Login endpoint'ine dummy kullanıcı bilgileri gönderin.
+
+Order Microservice'in CreateProduct endpoint'ine token ile birlikte productId ve quantity bilgilerini gönderin.
+
+Mikroservisler arasındaki iletişim MassTransit ile sağlanacaktır ve ilgili işlemler otomatik olarak gerçekleştirilecektir.
