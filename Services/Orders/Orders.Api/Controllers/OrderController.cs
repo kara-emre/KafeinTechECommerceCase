@@ -25,7 +25,7 @@ namespace Orders.Api.Controllers
         [Authorize]
         [Route("CreateOrder")]
         [ProducesResponseType(typeof(CreatedOrderResponse), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<CreatedOrderResponse>> CreateProduct([FromBody] CreateOrderCommand orderCommand)
+        public async Task<ActionResult<CreatedOrderResponse>> CreateOrder([FromBody] CreateOrderCommand orderCommand)
         {
             _logger.LogInformation("Order Started");
 
