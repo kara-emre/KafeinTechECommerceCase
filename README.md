@@ -1,6 +1,4 @@
-# Adding the specified technologies to the README.md content
-
-readme_content = """
+ 
 # KafeinTech E-Commerce Case
 
 This project is a microservice-based e-commerce application built using .NET 8.
